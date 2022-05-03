@@ -27,6 +27,28 @@
     float: left;
 }
 
+/* Sidebar customisation */
+.sidenav {
+    width: 75px;
+    position: fixed;
+    left: 0;
+    background-color: royalblue;
+    margin-top: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.5s;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.sidenav p{
+    color: black;
+}
+
+.sidenav a{
+    color: black;
+}
+
 /* Footer customisation */
 
 .footer-custom {
