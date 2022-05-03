@@ -1,7 +1,31 @@
+/* Navbar css */
 .navbar-custom {
     background-color: royalblue;
 }
-.navbar-custom .navbar-brand,
+
+.navbar-custom .navbar-brand {
+    color: black;
+    font-size: xx-large;
+}
 .navbar-custom .navbar-collapse li a{
     color: black;
 }
+
+.form-group {
+    float: left;
+    margin-top: 8px;
+}
+
+.btn-default {
+    float: left;
+    margin-left: 2px;
+    margin-top: 8px;
+}
+
+.rank {
+    float: left;
+}
+
+
+
+
