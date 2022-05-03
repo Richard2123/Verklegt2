@@ -1,4 +1,4 @@
-/* Navbar css */
+/* Navbar customisation */
 .navbar-custom {
     background-color: royalblue;
 }
@@ -27,6 +27,14 @@
     float: left;
 }
 
+/* Footer customisation */
 
-
+.footer-custom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: royalblue;
+    color: black;
+}
 
