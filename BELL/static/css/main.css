@@ -1,0 +1,7 @@
+.navbar-custom {
+    background-color: royalblue;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-collapse li a{
+    color: black;
+}
