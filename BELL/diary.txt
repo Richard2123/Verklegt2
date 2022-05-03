@@ -1,0 +1,5 @@
+02.05.22:
+Hjörleifur: horfði á fyrirlestra og planaði database
+
+03.05.22:
+Hjörleifur: gerði ddl file fyrir databaseinn, pythonskriptu fyrir user creation, setti upp google database.
