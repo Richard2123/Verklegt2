@@ -81,3 +81,12 @@
     margin-left: 43px;
 }
 
+/* Checkout */
+.tab-pane {
+    white-space: nowrap;
+}
+
+.contact {
+    width: 200px;
+}
+

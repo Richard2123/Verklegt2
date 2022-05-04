@@ -5,17 +5,42 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
     <h1>Checkout</h1>
     <ul class="nav nav-tabs">
-        <li><a href="#a" data-toggle="tab">a</a></li>
-        <li><a href="#b" data-toggle="tab">b</a></li>
-        <li><a href="#c" data-toggle="tab">c</a></li>
-        <li><a href="#d" data-toggle="tab">d</a></li>
+        <li class="active"><a href="#a" data-toggle="tab">Contact Information</a></li>
+        <li><a href="#b" data-toggle="tab">Payment</a></li>
+        <li><a href="#c" data-toggle="tab">Rate seller</a></li>
+        <li><a href="#d" data-toggle="tab">Review order</a></li>
     </ul>
 
     <div class="tab-content">
-        <div class="tab-pane active" id="a">AAA</div>
-        <div class="tab-pane" id="b">BBB</div>
-        <div class="tab-pane" id="c">CCC</div>
-        <div class="tab-pane" id="d">DDD</div>
+        <div class="tab-pane active" id="a">
+            <p>First name:</p>
+            <input type="text" class="contact">
+            <p>Last Name:</p>
+            <input type="text" class="contact">
+            <p>Street name:</p>
+            <input type="text" class="contact">
+            <p>House number:</p>
+            <input type="text" class="contact">
+            <p>City:</p>
+            <input type="text" class="contact">
+            <p for="country-name">Country:</p>
+            <select name="country" id="country-name" class="contact">
+                <option value="iceland">Iceland</option>
+                <option value="iceland">South Africa</option>
+            </select>
+            <p>Postal code:</p>
+            <input type="text" class="contact">
+
+        </div>
+        <div class="tab-pane" id="b">
+            BBB
+        </div>
+        <div class="tab-pane" id="c">
+            CCC
+        </div>
+        <div class="tab-pane" id="d">
+            DDD
+        </div>
     </div>
 
 {% endblock %}
