@@ -162,3 +162,8 @@
     opacity: 0.4
 }
 
+.pay {
+    flex: auto;
+    margin-left: 100px;
+}
+

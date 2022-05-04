@@ -7,3 +7,5 @@ Hjörleifur: gerði ddl file fyrir databaseinn, pythonskriptu fyrir user creatio
 Richard: bjó til base.html, footer.html, navigation.html og side-navbar.html og byrjaði að vinna í forsíðu.
 
 04.05.22:
+
+Richard: Bjó til útlit á forsíðu og checkout-síðu.
