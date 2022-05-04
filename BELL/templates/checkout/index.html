@@ -3,16 +3,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-    <h1>Checkout</h1>
+    <h1 class="checkout-header">Checkout</h1>
     <ul class="nav nav-tabs">
-        <li class="active"><a href="#a" data-toggle="tab">Contact Information</a></li>
-        <li><a href="#b" data-toggle="tab">Payment</a></li>
-        <li><a href="#c" data-toggle="tab">Rate seller</a></li>
-        <li><a href="#d" data-toggle="tab">Review order</a></li>
+        <li class="active"><a href="#contact-info" data-toggle="tab">Contact Information</a></li>
+        <li><a href="#payment" data-toggle="tab">Payment</a></li>
+        <li><a href="#rate" data-toggle="tab">Rate seller</a></li>
+        <li><a href="#review" data-toggle="tab">Review order</a></li>
     </ul>
 
     <div class="tab-content">
-        <div class="tab-pane active" id="a">
+        <div class="tab-pane active" id="contact-info">
             <p>First name:</p>
             <input type="text" class="contact">
             <p>Last Name:</p>
@@ -32,13 +32,23 @@
             <input type="text" class="contact">
 
         </div>
-        <div class="tab-pane" id="b">
-            BBB
+        <div class="tab-pane" id="payment">
+            <p>First name:</p>
+            <input type="text" class="contact">
+            <p>Last Name:</p>
+            <input type="text" class="contact">
+            <p>Card number:</p>
+            <input type="text" class="contact">
+            <p>Expiration date:</p>
+            <input type="text" class="payment">
+            <p>CVC:</p>
+            <input type="text" class="payment-cvc" maxlength="3">
+
         </div>
-        <div class="tab-pane" id="c">
+        <div class="tab-pane" id="rate">
             CCC
         </div>
-        <div class="tab-pane" id="d">
+        <div class="tab-pane" id="review">
             DDD
         </div>
     </div>

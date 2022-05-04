@@ -60,6 +60,7 @@
     width: 100%;
     background-color: royalblue;
     color: black;
+    margin-top: 100px;
 }
 
 .text-reset {
@@ -82,11 +83,39 @@
 }
 
 /* Checkout */
+.nav-tabs {
+    width: 600px;
+    margin-left: 150px;
+}
+
 .tab-pane {
+    margin-left: 150px;
     white-space: nowrap;
+    border: solid 1px lightgray;
+}
+.tab-pane p {
+    margin-left: 10px;
+}
+
+.tab-pane input {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.tab-pane select {
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .contact {
     width: 200px;
+}
+
+.checkout-header {
+    margin-left: 150px;
+}
+
+.payment-cvc {
+    width: 50px;
 }
 
