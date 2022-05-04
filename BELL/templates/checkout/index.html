@@ -3,16 +3,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-    <h1>Checkout</h1>
+    <h1 class="checkout-header">Checkout</h1>
     <ul class="nav nav-tabs">
-        <li class="active"><a href="#a" data-toggle="tab">Contact Information</a></li>
-        <li><a href="#b" data-toggle="tab">Payment</a></li>
-        <li><a href="#c" data-toggle="tab">Rate seller</a></li>
-        <li><a href="#d" data-toggle="tab">Review order</a></li>
+        <li class="active"><a href="#contact-info" data-toggle="tab">Contact Information</a></li>
+        <li><a href="#payment" data-toggle="tab">Payment</a></li>
+        <li><a href="#rate" data-toggle="tab">Rate seller</a></li>
+        <li><a href="#review" data-toggle="tab">Review order</a></li>
     </ul>
 
     <div class="tab-content">
-        <div class="tab-pane active" id="a">
+        <div class="tab-pane active" id="contact-info">
             <p>First name:</p>
             <input type="text" class="contact">
             <p>Last Name:</p>
@@ -32,13 +32,32 @@
             <input type="text" class="contact">
 
         </div>
-        <div class="tab-pane" id="b">
-            BBB
+        <div class="tab-pane" id="payment">
+            <p>First name:</p>
+            <input type="text" class="contact">
+            <p>Last Name:</p>
+            <input type="text" class="contact">
+            <p>Card number:</p>
+            <input type="text" class="contact" maxlength="16">
+            <p>Expiration date(dd/mm/yy):</p>
+            <input type="text" class="payment">
+            <p>CVC:</p>
+            <input type="text" class="payment-cvc" maxlength="3">
+
         </div>
-        <div class="tab-pane" id="c">
-            CCC
+        <div class="tab-pane" id="rate">
+            <div class="rate">
+
+                <h6 class="mb-0">Rate your seller(Optional)</h6>
+
+                <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                </div>
+
+
+            </div>
         </div>
-        <div class="tab-pane" id="d">
+
+        <div class="tab-pane" id="review">
             DDD
         </div>
     </div>

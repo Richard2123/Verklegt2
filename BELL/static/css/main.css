@@ -60,6 +60,7 @@
     width: 100%;
     background-color: royalblue;
     color: black;
+    margin-top: 100px;
 }
 
 .text-reset {
@@ -82,11 +83,82 @@
 }
 
 /* Checkout */
+.nav-tabs {
+    width: 600px;
+    margin-left: 150px;
+}
+
 .tab-pane {
+    margin-left: 150px;
     white-space: nowrap;
+    border: solid 1px lightgray;
+}
+.tab-pane p {
+    margin-left: 10px;
+}
+
+.tab-pane input {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.tab-pane select {
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .contact {
     width: 200px;
+}
+
+.checkout-header {
+    margin-left: 150px;
+}
+
+.payment-cvc {
+    width: 50px;
+}
+
+.payment {
+    width: 100px;
+}
+
+.rating {
+    background-color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.rating>input {
+    display: none
+}
+
+.rating>label {
+    position: relative;
+    width: 1em;
+    font-size: 30px;
+    font-weight: 300;
+    color: black;
+    cursor: pointer;
+}
+
+.rating>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+    opacity: 1 !important
+}
+
+.rating>input:checked~label:before {
+    opacity: 1
+}
+
+.rating:hover>input:checked~label:before {
+    opacity: 0.4
 }
 
