@@ -67,5 +67,17 @@
 }
 
 /* front page */
+.suggested p {
+    margin-left: 43px;
+    font-weight: bold;
+}
 
+.item {
+    float: left;
+}
+
+.sug-img {
+    height: 150px;
+    margin-left: 43px;
+}
 
