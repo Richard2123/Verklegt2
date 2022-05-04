@@ -1,5 +1,9 @@
 02.05.22:
 Hjörleifur: horfði á fyrirlestra og planaði database
+Richard: horfi á fyrirlestra.
 
 03.05.22:
 Hjörleifur: gerði ddl file fyrir databaseinn, pythonskriptu fyrir user creation, setti upp google database.
+Richard: bjó til base.html, footer.html, navigation.html og side-navbar.html og byrjaði að vinna í forsíðu.
+
+04.05.22:
