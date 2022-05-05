@@ -172,3 +172,22 @@
     margin-left: 100px;
 }
 
+/* Sell item */
+
+.sell-item {
+    margin-top: 100px;
+    margin-left: 37%;
+}
+
+.item-create {
+    width: 250px
+}
+
+.item-description {
+    resize: none;
+    height: 100px;
+    width: 250px
+}
+
+
+

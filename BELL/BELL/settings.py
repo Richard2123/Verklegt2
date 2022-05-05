@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'frontpage.apps.FrontpageConfig',
     'checkout.apps.CheckoutConfig',
+    'search.apps.SearchConfig',
+    'sellitem.apps.SellitemConfig'
 ]
 
 MIDDLEWARE = [
