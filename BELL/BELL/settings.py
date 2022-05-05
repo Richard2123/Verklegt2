@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'BELL.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'belldb',
+        'USER': 'belladmin',
+        'PASSWORD': '12345',
+        'HOST': '35.230.139.171',
+        'PORT': '5432',
     }
 }
 
