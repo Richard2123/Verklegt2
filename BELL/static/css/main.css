@@ -27,9 +27,13 @@
     float: left;
 }
 
+.search_form {
+    display: inline;
+}
+
 /* Sidebar customisation */
 .sidenav {
-    width: 100px;
+    width: 160px;
     position: fixed;
     left: 0;
     background-color: royalblue;
@@ -42,6 +46,7 @@
 }
 
 .sidenav p{
+    margin-left: 35px;
     color: black;
     font-weight: bold;
 }

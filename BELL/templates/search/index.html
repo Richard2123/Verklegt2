@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="suggested">
+        {% if searched %}
+            <p>You searched for {{ searched }}</p>
+            {% for item in frontpage_suggested %}
+                <div class="item">
+                    <img src="{{ item.image }}" class="sug-img" alt="">
+                    <ul>{{ item.name }}</ul>
+                    <ul>Seller rating: {{ item.rating }}</ul>
+                    <ul>Highest bid: ${{ item.highest }}</ul>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No item searched for!</p>
+        {% endif %}
+
+    </div>
+{% endblock %}
