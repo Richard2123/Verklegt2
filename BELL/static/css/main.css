@@ -56,10 +56,6 @@
     color: black;
 }
 
-.sidenav ul {
-    display: ;
-}
-
 /* Footer customisation */
 
 .footer-custom {
@@ -202,5 +198,27 @@
 .post-button {
     margin-top: 10px;
 }
+
+/* User profile */
+
+.user-image {
+    width: 200px;
+}
+
+.user-info{
+    display: inline;
+    width: 50%;
+    float: left;
+}
+
+.edit-button{
+    margin-top: 20px;
+}
+
+.logout{
+    float: right;
+}
+
+
 
 
