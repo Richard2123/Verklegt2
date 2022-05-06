@@ -37,7 +37,7 @@
     position: fixed;
     left: 0;
     background-color: royalblue;
-    margin-top: 150px;
+    margin-top: 140px;
     padding-top: 20px;
     padding-bottom: 20px;
     transition: 0.5s;
@@ -54,6 +54,10 @@
 .sidenav a{
     float: left;
     color: black;
+}
+
+.sidenav ul {
+    margin-right: 40px;
 }
 
 /* Footer customisation */
@@ -136,7 +140,7 @@
 }
 
 .rating>input {
-    display: none
+    display: none;
 }
 
 .rating>label {
@@ -151,20 +155,20 @@
 .rating>label::before {
     content: "\2605";
     position: absolute;
-    opacity: 0
+    opacity: 0;
 }
 
 .rating>label:hover:before,
 .rating>label:hover~label:before {
-    opacity: 1 !important
+    opacity: 1; !important
 }
 
 .rating>input:checked~label:before {
-    opacity: 1
+    opacity: 1;
 }
 
 .rating:hover>input:checked~label:before {
-    opacity: 0.4
+    opacity: 0.4;
 }
 
 .pay {
@@ -175,19 +179,28 @@
 /* Sell item */
 
 .sell-item {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 37%;
 }
 
 .item-create {
-    width: 250px
+    width: 250px;
 }
 
 .item-description {
     resize: none;
     height: 100px;
-    width: 250px
+    width: 250px;
 }
 
+.upload-img {
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
+
+.post-button {
+    margin-top: 10px;
+}
 
 
