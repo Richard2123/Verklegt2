@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'search.apps.SearchConfig',
     'sellitem.apps.SellitemConfig',
     'userprofile.apps.UserprofileConfig',
-    'user.apps.UserConfig'
+    'user.apps.UserConfig',
 ]
 
 MIDDLEWARE = [

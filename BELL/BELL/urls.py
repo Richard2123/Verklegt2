@@ -24,5 +24,5 @@ urlpatterns = [
     path('search/', include('search.urls')),
     path('sellitem/', include('sellitem.urls')),
     path('userprofile/', include('userprofile.urls')),
-    path('user/', include('user.urls')),
+    path('user/', include('user.urls'))
 ]
