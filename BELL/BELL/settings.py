@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'frontpage.apps.FrontpageConfig',
     'checkout.apps.CheckoutConfig',
     'search.apps.SearchConfig',
-    'sellitem.apps.SellitemConfig'
+    'sellitem.apps.SellitemConfig',
+    'userprofile.apps.UserprofileConfig',
 ]
 
 MIDDLEWARE = [
