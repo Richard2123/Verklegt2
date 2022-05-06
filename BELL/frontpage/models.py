@@ -19,10 +19,8 @@ class People(models.Model):
 
 
 class ItemImage(models.Model):
-    image = models.CharField(max_length=9999, blank=False,default=0)
+    image = models.ImageField(upload_to="images/")
 
-    def __str__(self):
-        return f"{self.image}"
 
 
 class Item(models.Model):
