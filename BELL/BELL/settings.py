@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'frontpage.apps.FrontpageConfig',
     'checkout.apps.CheckoutConfig',
+    'search.apps.SearchConfig',
+    'sellitem.apps.SellitemConfig',
+    'userprofile.apps.UserprofileConfig',
     'user.apps.UserConfig'
 ]
 
