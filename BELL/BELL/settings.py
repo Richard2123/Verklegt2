@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'sellitem.apps.SellitemConfig',
     'userprofile.apps.UserprofileConfig',
     'user.apps.UserConfig',
+    'edituserprofile.apps.EdituserprofileConfig',
 ]
 
 MIDDLEWARE = [
