@@ -2,13 +2,15 @@
 {% block content %}
     <div class="container">
         <div class="user-info">
-            <img src="https://cdn5.vectorstock.com/i/thumb-large/45/79/male-avatar-profile-picture-silhouette-light-vector-4684579.jpg" class="user-image" id="user-photo">
+            <img src="https://cdn5.vectorstock.com/i/thumb-large/45/79/male-avatar-profile-picture-silhouette-light-vector-4684579.jpg" class="user-image" id="user-photo" alt="">
             <h3>Name: <span id="user-name">Your Name</span> </h3>
             <h3>E-mail: <span id="user-email">Your E-mail</span> </h3>
             <h3>Country: <span id="user-country">Country</span></h3>
             <h3>Rating: <span id="user-rating">4</span></h3>
             <h3>Bio: <span id="user-country">THIS IS MY BIO IT IS VERY LONG THIS IS MY BIO IT IS VERY LONG THIS IS MY BIO IT IS VERY LONG THIS IS MY BIO IT IS VERY LONG THIS IS MY BIO IT IS VERY LONG</span></h3>
-            <input type="button" value="Edit" class="edit-button">
+            <form method="get" action="/edituserprofile">
+                <button type="submit" value="Edit" class="edit-button">Edit</button>
+            </form>
         </div>
         <div class="logout">
             <input type="button" value="Logout" class="logout-button">
