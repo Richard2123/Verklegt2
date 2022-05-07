@@ -205,18 +205,25 @@
     width: 200px;
 }
 
-.user-info{
+.user-info {
     display: inline;
     width: 50%;
     float: left;
 }
 
-.edit-button{
+.edit-button {
     margin-top: 20px;
 }
 
-.logout{
+.logout {
     float: right;
+}
+
+/* Edit user profile */
+
+.edit-profile {
+    margin-top: 50px;
+    margin-left: 37%;
 }
 
 
