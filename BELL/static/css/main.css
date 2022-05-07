@@ -226,6 +226,16 @@
     margin-left: 37%;
 }
 
+.edit-info {
+    width: 400px;
+}
+
+.bio {
+    resize: none;
+    height: 100px;
+    width: 250px;
+}
+
 
 
 
