@@ -263,12 +263,10 @@ img {
 }
 
 .detail-image1:hover {
-    -webkit-transform:scale(1.5); /* or some other value */
     transform:scale(1.5);
 }
 
 .detail-image2:hover {
-    -webkit-transform:scale(10); /* or some other value */
     transform:scale(5.5);
 }
 
@@ -301,3 +299,6 @@ img {
     display: inline;
     margin-right: 20px;
 }
+
+/* yourbids */
+
