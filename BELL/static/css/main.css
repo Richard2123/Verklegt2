@@ -255,7 +255,7 @@
 
 .detail-image2 {
     margin-top: 10px;
-    width: 50px;
+    width: 97px;
 }
 
 img {
@@ -269,7 +269,35 @@ img {
 
 .detail-image2:hover {
     -webkit-transform:scale(10); /* or some other value */
-    transform:scale(10);
+    transform:scale(5.5);
 }
 
+.image-detail {
+    display: inline;
+    float: left;
+    margin-right: 20px;
+}
 
+.product-text {
+    display: inline;
+    float: left;
+    width: 60%;
+    height: 250px;
+}
+
+.highest-offer {
+    display: inline-block;
+    width: 40%;
+}
+
+.similar-products p {
+    font-weight: bold;
+    margin-top: 90px;
+    font-size: 16px;
+}
+
+.similar-img {
+    width: 150px;
+    display: inline;
+    margin-right: 20px;
+}
