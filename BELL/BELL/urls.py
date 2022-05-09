@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', include('frontpage.urls')),
@@ -27,3 +29,6 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('edituserprofile', include('edituserprofile.urls')),
 ]
+
+"""if settings.Debug:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)"""

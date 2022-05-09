@@ -10,3 +10,20 @@ class ListItem(models.Model):
     base_price = models.FloatField()
     main_image = models.IntegerField()
     other_images = ArrayField(models.IntegerField())
+
+
+class ItemImage(models.Model):
+    name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to="images")
+
+    def __str__(self):
+        return self.title
+
+
+class Item(models.Model):
+    name = models.CharField(max_length=255)
+    userid = models.IntegerField()
+    user_rank = models.CharField(max_length=255, blank=True)
+    starting_price = models.FloatField()
+    first_image = models.ForeignKey(ItemImage, default=0, on_delete=models.SET_DEFAULT)
+    images = ArrayField(models.IntegerField())
