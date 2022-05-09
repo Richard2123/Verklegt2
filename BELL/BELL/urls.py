@@ -27,7 +27,8 @@ urlpatterns = [
     path('sellitem/', include('sellitem.urls')),
     path('userprofile/', include('userprofile.urls')),
     path('user/', include('user.urls')),
-    path('edituserprofile', include('edituserprofile.urls')),
+    path('edituserprofile/', include('edituserprofile.urls')),
+    path('itemdetail/', include('itemdetail.urls'))
 ]
 
 """if settings.Debug:
