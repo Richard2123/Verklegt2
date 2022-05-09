@@ -8,4 +8,4 @@ class UserInfo(UserCreationForm):
 
     class TheForm:
         model = User
-        boxes = ("")
+        boxes = ("username", "email", "name", "location", "password1", "password2")

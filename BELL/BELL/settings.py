@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     'search.apps.SearchConfig',
     'sellitem.apps.SellitemConfig',
     'userprofile.apps.UserprofileConfig',
-    'user.apps.UserConfig'
+    'user.apps.UserConfig',
+    'edituserprofile.apps.EdituserprofileConfig',
+    'itemdetail.apps.ItemdetailConfig',
+    'yourbids.apps.YourbidsConfig',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +138,10 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#media folder
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')

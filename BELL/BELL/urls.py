@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', include('frontpage.urls')),
@@ -25,4 +27,12 @@ urlpatterns = [
     path('sellitem/', include('sellitem.urls')),
     path('userprofile', include('userprofile.urls')),
     path('user/', include('user.urls')),
+    path('userprofile/', include('userprofile.urls')),
+    path('user/', include('user.urls')),
+    path('edituserprofile/', include('edituserprofile.urls')),
+    path('itemdetail/', include('itemdetail.urls')),
+    path('yourbids/', include('yourbids.urls')),
 ]
+
+"""if settings.Debug:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)"""

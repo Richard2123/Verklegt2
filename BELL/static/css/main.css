@@ -56,10 +56,6 @@
     color: black;
 }
 
-.sidenav ul {
-    display: ;
-}
-
 /* Footer customisation */
 
 .footer-custom {
@@ -203,4 +199,105 @@
     margin-top: 10px;
 }
 
+/* User profile */
 
+.user-image {
+    width: 200px;
+}
+
+.user-info {
+    display: inline;
+    width: 50%;
+    float: left;
+}
+
+.edit-button {
+    margin-top: 20px;
+}
+
+.logout {
+    float: right;
+}
+
+/* Edit user profile */
+
+.edit-profile {
+    margin-top: 50px;
+    margin-left: 37%;
+}
+
+.edit-info {
+    width: 400px;
+}
+
+.bio {
+    resize: none;
+    height: 100px;
+    width: 250px;
+}
+
+.confirm-button {
+    margin-right: 1000px;
+}
+
+/* Search */
+
+#sorting-method {
+    display: inline;
+    float: right;
+}
+
+/* Item detail */
+
+.detail-image1 {
+    width: 400px;
+}
+
+.detail-image2 {
+    margin-top: 10px;
+    width: 97px;
+}
+
+img {
+    transition:transform 0.25s ease;
+}
+
+.detail-image1:hover {
+    -webkit-transform:scale(1.5); /* or some other value */
+    transform:scale(1.5);
+}
+
+.detail-image2:hover {
+    -webkit-transform:scale(10); /* or some other value */
+    transform:scale(5.5);
+}
+
+.image-detail {
+    display: inline;
+    float: left;
+    margin-right: 20px;
+}
+
+.product-text {
+    display: inline;
+    float: left;
+    width: 60%;
+    height: 250px;
+}
+
+.highest-offer {
+    display: inline-block;
+    width: 40%;
+}
+
+.similar-products p {
+    font-weight: bold;
+    margin-top: 90px;
+    font-size: 16px;
+}
+
+.similar-img {
+    width: 150px;
+    display: inline;
+    margin-right: 20px;
+}
