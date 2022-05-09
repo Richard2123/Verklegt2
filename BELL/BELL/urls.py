@@ -28,7 +28,8 @@ urlpatterns = [
     path('userprofile/', include('userprofile.urls')),
     path('user/', include('user.urls')),
     path('edituserprofile/', include('edituserprofile.urls')),
-    path('itemdetail/', include('itemdetail.urls'))
+    path('itemdetail/', include('itemdetail.urls')),
+    path('yourbids/', include('yourbids.urls')),
 ]
 
 """if settings.Debug:
