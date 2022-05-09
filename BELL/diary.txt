@@ -16,3 +16,7 @@ Hjörleifur: kláraði módelin og byrjaði migrations
 
 06.05.22:
 Hjörleifur: tengja kóðann við databaseinn
+Richard: Bjó til sell item síðu
+
+09.05.22:
+Richard: Bjó til user profile og edit user profile, byrjaði á your bids síðu.
