@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
     <form class="edit-profile">
+        <ul>First name:</ul>
+        <input type="text" class="edit-info" id="first-name">
+        <ul>Last name:</ul>
+        <input type="text" class="edit-info" id="last-name">
         <ul>New E-mail:</ul>
-        <input type="text" class="edit-info">
+        <input type="text" class="edit-info" id="new-email">
         <ul>Select new country:</ul>
         <select name="country" id="country-name">
            <option value="Afganistan">Afghanistan</option>
@@ -253,6 +257,10 @@
            <option value="Zimbabwe">Zimbabwe</option>
         </select>
         <ul>New Bio:</ul>
-        <textarea type="text" class="bio" name="bio-description"></textarea>
+        <textarea class="bio" name="bio-description" id="new-bio"></textarea>
+        <p><input type="file"  accept="image/*" name="image" id="file-profile"  onchange="loadFileProfile(event)" style="display: none;"></p>
+        <p><label for="file-profile" style="cursor: pointer;">Upload profile image</label></p>
+        <img class="upload-profile" id="output-profile" width="100" />
+        <input type="submit" value="Confirm" class="confirm-button">
     </form>
 {% endblock %}

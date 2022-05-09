@@ -23,3 +23,7 @@ let image = document.getElementById('output-five');
 image.src = URL.createObjectURL(event.target.files[0]);
 };
 
+let loadFileProfile = function(event) {
+let image = document.getElementById('output-profile');
+image.src = URL.createObjectURL(event.target.files[0]);
+};
