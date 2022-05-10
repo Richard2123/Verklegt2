@@ -328,7 +328,17 @@ img {
 }
 
 .your-item-image {
+    display: inline-block;
+    width: 40%;
+}
 
+.your-item-text {
+    display: inline-block;
+    width: 55%;
+}
+
+.lower-offers {
+    margin-top: 5px;
 }
 
 
