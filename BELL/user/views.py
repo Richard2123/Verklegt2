@@ -8,8 +8,8 @@ def register(request):
         if form.is_valid():
             form.save()
             return redirect('login')
-        return render(request, 'user/register.html', {
-            'form': UserCreationForm()
+    return render(request, 'user/register.html', {
+        'form': UserCreationForm()
         })
 def index(request):
     return render(request, 'user/register.html')
