@@ -7,21 +7,35 @@ from .models import Upload
 
 # Create your views here.
 def index(request):
-    return render(request, 'sellitem/index.html')
+    return render(request, 'sellitem/test.html')
 
 
-class UploadImage(View):
+"""class UploadImage(View):
     def get(self, request):
-        html = """
+        html = 
             <form method="post" enctype="multipart/form-data">
               <input type='text' style='display:none;' value='%s' name='csrfmiddlewaretoken'/>
               <input type="file" name="image" accept="image/*">
               <button type="submit">Upload Image</button>
             </form>
-        """ % (get_token(request))
+         % (get_token(request))
         return HttpResponse(html)
 
     def post(self, request):
         image = request.FILES['image']
         image_url = Upload.upload_item_image(image, image.name)
-        return HttpResponse("<img src='%s'/>" % image_url)
+        return HttpResponse("<img src='%s'/>" % image_url)"""
+
+
+def post_item(request):
+
+    if request.method == "POST":
+        form = SellItemForm(request.POST, request.FILES)
+        if form.is_valid():
+            send = form.save(commit=False)
+            send.poster = request.user
+            send.save()
+            return render(request, 'sellitem/test.html')
+        else:
+            form = SellItemForm()
+        return render(request, 'sellitem/test.html'), {'form': form}

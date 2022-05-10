@@ -16,27 +16,22 @@ class Upload:
 
 
 class ListItem(models.Model):
-    userid = models.IntegerField()
+    poster = models.ForeignKey(User, on_delete=models.CASCADE)
     itemname = models.CharField(max_length=255)
     condition = models.CharField(max_length=20)
     description = models.CharField(max_length=1000)
+    tag = models.CharField(max_length=50)
     base_price = models.FloatField()
-    main_image = models.IntegerField()
-    other_images = ArrayField(models.IntegerField())
+    main_image = models.ImageField(upload_to='storage', null=True, blank=True)
+    other_images = ArrayField(models.ImageField(upload_to='images', null=True, blank=True), size=4)
+    itemurl = models.SlugField(max_length=100, unique=True)
 
-
-class ItemImage(models.Model):
-    name = models.CharField(max_length=200)
-    image = models.ImageField(upload_to="images")
+    def _get_unique_url(self, *args, **kwargs):
+        self.itemurl = slugify(self.itemname)
+        super(ListItem, self).save(*args, **kwargs)
 
     def __str__(self):
-        return self.title
+        return f"{self.itemname} {self.poster} {self.condition} {self.description} {self.itemurl} {self.tag}"
 
-
-class Item(models.Model):
-    name = models.CharField(max_length=255)
-    userid = models.IntegerField()
-    user_rank = models.CharField(max_length=255, blank=True)
-    starting_price = models.FloatField()
-    first_image = models.ForeignKey(ItemImage, default=0, on_delete=models.SET_DEFAULT)
-    images = ArrayField(models.IntegerField())
+    def __float__(self):
+        return self.base_price
