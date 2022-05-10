@@ -9,3 +9,5 @@ class Purchase(models.Model):
 
     def __str__(self):
         return f"{self.itemid} {self.sellerid} {self.buyerid} {self.price}"
+
+

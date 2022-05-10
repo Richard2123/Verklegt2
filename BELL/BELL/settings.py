@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'edituserprofile.apps.EdituserprofileConfig',
     'itemdetail.apps.ItemdetailConfig',
     'yourbids.apps.YourbidsConfig',
+    'youritems.apps.YouritemsConfig',
+    'youritemdetail.apps.YouritemdetailConfig',
 ]
 
 MIDDLEWARE = [

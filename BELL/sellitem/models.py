@@ -1,6 +1,24 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
+TAG_CHOICES = (
+    ('antiques', 'Antiques'),
+    ('appliances', ''),
+    ('arts-and-crafts', 'Arts and crafts'),
+    ('car-parts', 'Car parts'),
+    ('collectibles', 'Collectibles'),
+    ('computer', 'Computer'),
+    ('electronics', 'Electronics'),
+    ('furniture', 'Furniture'),
+    ('household', 'Household'),
+    ('instruments', 'Instruments'),
+    ('jewelry', 'Jewelry'),
+    ('sporting', 'Sporting'),
+    ('tools', 'Tools'),
+    ('toys', 'Toys'),
+    ('video-games', 'Video games'),
+)
+
 
 class ListItem(models.Model):
     userid = models.IntegerField()
