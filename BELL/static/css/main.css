@@ -301,4 +301,16 @@ img {
 }
 
 /* yourbids */
+.active-bids {
+    display: inline-block;
+    width: 45%;
+}
 
+.accepted-bids {
+    display: inline-block;
+    width: 45%;
+}
+
+.bids-img {
+    width: 100px;
+}
