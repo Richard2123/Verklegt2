@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import View
+from BELL.forms import SellItemForm
 from django.http.response import HttpResponse
 from django.middleware.csrf import get_token
 from .models import Upload
