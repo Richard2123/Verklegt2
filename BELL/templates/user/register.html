@@ -1,19 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1 class="Register-header">Register</h1>
-
-
-    <div class="tab-content">
-        <div class="tab-pane active" id="contact-info">
-            <p>Username:</p>
-            <input type="text" class="contact">
-            <p>Email:</p>
-            <input type="text" class="contact">
-            <p>Password:</p>
-            <input type="text" class="contact">
-            <p>Confirm password:</p>
-            <input type="text" class="contact">
-        </div>
-    </div>
+    <form class="form form-horizontal" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" class="btn btn-primary" value="Sign up" />
+    </form>
 
 {% endblock %}
