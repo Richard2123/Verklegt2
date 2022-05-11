@@ -23,8 +23,11 @@ class ListItem(models.Model):
     condition = models.CharField(max_length=20)
     description = models.CharField(max_length=1000)
     base_price = models.FloatField(default=0)
-    main_image = models.ImageField(upload_to='storage', null=True, blank=True)
-    other_images = ArrayField(models.ImageField(upload_to='images', null=True, blank=True), size=4)
+    main_image = models.ImageField(upload_to='images', null=True, blank=True)
+    image2 = models.ImageField(upload_to='images', null=True, blank=True)
+    image3 = models.ImageField(upload_to='images', null=True, blank=True)
+    image4 = models.ImageField(upload_to='images', null=True, blank=True)
+    image5 = models.ImageField(upload_to='images', null=True, blank=True)
     itemurl = models.SlugField(max_length=100, unique=True)
 
     def _get_unique_url(self, *args, **kwargs):
