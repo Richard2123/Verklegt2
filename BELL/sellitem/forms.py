@@ -1,5 +1,5 @@
 from django import forms
-from sellitem.models import ListItem
+from models import ListItem
 
 
 """class ImageUploadForm(forms.ModelForm):

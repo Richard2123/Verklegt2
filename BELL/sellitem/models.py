@@ -40,8 +40,8 @@ class ListItem(models.Model):
     itemname = models.CharField(max_length=255)
     condition = models.CharField(max_length=20)
     description = models.CharField(max_length=1000)
-    tag = models.CharField(max_length=50)
-    base_price = models.FloatField()
+    """tag = models.CharField(max_length=50)"""
+    base_price = models.FloatField(default=0)
     main_image = models.ImageField(upload_to='storage', null=True, blank=True)
     other_images = ArrayField(models.ImageField(upload_to='images', null=True, blank=True), size=4)
     itemurl = models.SlugField(max_length=100, unique=True)
