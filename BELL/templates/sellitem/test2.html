@@ -2,31 +2,13 @@
 {% block content %}
     <form class="sell-item" action="post_item">
         <p>Item name:</p>
+
         <input type="text" class="item-create" name="name">
+
         <p>Item condition:</p>
         <input type="text" class="item-create" name="condition">
         <p>Item description:</p>
         <textarea class="item-description" name="description"></textarea>
-        <!--<p>Select tag:</p>
-        <div>
-            <select class="tag" id="tags">
-                <option value="antiques">Antiques</option>
-                <option value="appliances">Appliances</option>
-                <option value="arts-and-crafts">Arts and crafts</option>
-                <option value="car-parts">Car parts</option>
-                <option value="collectibles">Collectibles</option>
-                <option value="computers">Computers</option>
-                <option value="electronics">Electronics</option>
-                <option value="furniture">Furniture</option>
-                <option value="household">Household</option>
-                <option value="instruments">Instruments</option>
-                <option value="jewelry">Jewelery</option>
-                <option value="sporting">Sporting</option>
-                <option value="tools">Tools</option>
-                <option value="toys">Toys</option>
-                <option value="video-games">Video games</option>
-            </select>
-        </div>-->
         <p>Select image:</p>
         <p><input type="file"  accept="image/*" name="image" id="file1"  onchange="loadFileOne(event)" style="display: none;"></p>
         <p><label for="file1" style="cursor: pointer;">Upload main image</label></p>
@@ -45,6 +27,6 @@
             <img class="upload-img" id="output-four" width="50" />
             <img class="upload-img" id="output-five" width="50" />
         </div>
-    <input type="submit" value="Post" class="post-button">
+    <input type="submit" value="Submit" class="post-button">
     </form>
 {% endblock %}
