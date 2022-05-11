@@ -8,7 +8,7 @@ from .models import Upload
 
 # Create your views here.
 def index(request):
-    return render(request, 'sellitem/test.html')
+    return render(request, 'sellitem/index.html')
 
 
 """class UploadImage(View):
@@ -30,13 +30,13 @@ def index(request):
 
 def post_item(request):
 
-    if request.method == "POST":
-        form = SellItemForm(request.POST, request.FILES)
-        if form.is_valid():
-            send = form.save(commit=False)
-            send.poster = request.user
-            send.save()
-            return render(request, 'sellitem/test.html')
-        else:
-            form = SellItemForm()
-        return render(request, 'sellitem/test.html'), {'form': form}
+    form = SellItemForm()
+    if form.is_valid():
+        send = form.save(commit=False)
+        send.poster = request.user
+        print(send.poster)
+        send.save()
+        return render(request, 'sellitem/test.html')
+    else:
+        form = SellItemForm()
+    return render(request, 'sellitem/test.html'), {'form': form}
