@@ -17,33 +17,16 @@ class Upload:
             print("Image could not be uploaded")
 
 
-TAG_CHOICES = (
-    ('antiques', 'Antiques'),
-    ('appliances', ''),
-    ('arts-and-crafts', 'Arts and crafts'),
-    ('car-parts', 'Car parts'),
-    ('collectibles', 'Collectibles'),
-    ('computer', 'Computer'),
-    ('electronics', 'Electronics'),
-    ('furniture', 'Furniture'),
-    ('household', 'Household'),
-    ('instruments', 'Instruments'),
-    ('jewelry', 'Jewelry'),
-    ('sporting', 'Sporting'),
-    ('tools', 'Tools'),
-    ('toys', 'Toys'),
-    ('video-games', 'Video games'),
-)
-
-
 class ListItem(models.Model):
-    poster = models.ForeignKey(User, on_delete=models.CASCADE)
     itemname = models.CharField(max_length=255)
     condition = models.CharField(max_length=20)
     description = models.CharField(max_length=1000)
     base_price = models.FloatField(default=0)
     main_image = models.ImageField(upload_to='storage', null=True, blank=True)
-    other_images = ArrayField(models.ImageField(upload_to='images', null=True, blank=True), size=4)
+    image2 = models.ImageField(upload_to='storage', null=True, blank=True)
+    image3 = models.ImageField(upload_to='storage', null=True, blank=True)
+    image4 = models.ImageField(upload_to='storage', null=True, blank=True)
+    image5 = models.ImageField(upload_to='storage', null=True, blank=True)
     itemurl = models.SlugField(max_length=100, unique=True)
 
     def _get_unique_url(self, *args, **kwargs):

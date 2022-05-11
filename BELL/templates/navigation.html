@@ -17,7 +17,7 @@
                 {% if user.is_authenticated %}
                     <li class="active"><a href="{% url 'yourbids-index' %}">Your Bids<span class="sr-only">(current)</span></a></li>
                     <li><a href="{% url 'youritems-index' %}">Your items</a></li>
-                    <li><a href="{% url 'sellitem-test' %}">Sell item</a></li>
+                    <li><a href="{% url 'sell_item' %}">Sell item</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}
                     <li><a href="{% url 'login' %}">Login</a></li>

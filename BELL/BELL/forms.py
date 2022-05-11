@@ -6,4 +6,4 @@ class SellItemForm(forms.ModelForm):
 
     class Meta:
         model = ListItem
-        fields = ('itemname', 'condition', 'description', 'base_price', 'main_image', 'other_images')
+        fields = ('itemname', 'condition', 'description', 'base_price', 'main_image', 'image2', 'image3', 'image4', 'image5')
