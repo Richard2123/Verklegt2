@@ -14,10 +14,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="{% url 'yourbids-index' %}">Your Bids<span class="sr-only">(current)</span></a></li>
-                <li><a href="{% url 'youritems-index' %}">Your items</a></li>
-                <li><a href="{% url 'sellitem-test' %}">Sell item</a></li>
                 {% if user.is_authenticated %}
+                    <li class="active"><a href="{% url 'yourbids-index' %}">Your Bids<span class="sr-only">(current)</span></a></li>
+                    <li><a href="{% url 'youritems-index' %}">Your items</a></li>
+                    <li><a href="{% url 'sellitem-test' %}">Sell item</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}
                     <li><a href="{% url 'login' %}">Login</a></li>

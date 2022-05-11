@@ -16,6 +16,7 @@ class Upload:
         except Exception as x:
             print("Image could not be uploaded")
 
+
 TAG_CHOICES = (
     ('antiques', 'Antiques'),
     ('appliances', ''),
