@@ -18,7 +18,7 @@ class Upload:
 
 
 class ListItem(models.Model):
-    poster = models.ForeignKey(User, on_delete=models.CASCADE)
+    poster = models.ForeignKey(User, on_delete=models.CASCADE, default='')
     itemname = models.CharField(max_length=255)
     condition = models.CharField(max_length=20)
     description = models.CharField(max_length=1000)
