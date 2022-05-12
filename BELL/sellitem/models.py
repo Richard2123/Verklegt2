@@ -29,7 +29,24 @@ class ListItem(models.Model):
     image5 = models.CharField(max_length=9999, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.itemname}  {self.condition} {self.description} {self.tag}"
+        return f"{self.itemname}  {self.condition} {self.description}"
 
     def __float__(self):
         return self.base_price
+
+
+def get_frontpage_listings():
+    list_of_items = []
+    for x in ListItem.objects.all()[:6]:
+        try:
+            itimage = x.main_image
+            itname = x.itemname
+            itrating = 'unknown'
+            ithighest = '10'
+            item = {'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
+            list_of_items.append(item)
+
+        except:
+            pass
+
+    return list_of_items
