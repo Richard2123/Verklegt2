@@ -24,13 +24,13 @@ class SellItemForm(ModelForm):
         }
 
 
-class EditProfileForm(forms.ModelForm):
+class EditProfileForm(ModelForm):
 
     class Meta:
         model = Profile
         exclude = ['id', 'user']
         widgets = {
-            'full_name': forms.widgets.TextInput(attrs={'class': 'form-control'}),
-            'image': forms.widgets.TextInput(attrs={'class': 'form-control'}),
-            'bio': forms.widgets.Textarea(attrs={'class': 'form-control'})
+            'full_name': widgets.TextInput(attrs={'class': 'form-control'}),
+            'image': widgets.TextInput(attrs={'class': 'form-control'}),
+            'bio': widgets.Textarea(attrs={'class': 'form-control'})
         }

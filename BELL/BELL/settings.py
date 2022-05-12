@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'sellitem.apps.SellitemConfig',
     'userprofile.apps.UserprofileConfig',
     'user.apps.UserConfig',
-    'edituserprofile.apps.EdituserprofileConfig',
     'itemdetail.apps.ItemdetailConfig',
     'yourbids.apps.YourbidsConfig',
     'youritems.apps.YouritemsConfig',

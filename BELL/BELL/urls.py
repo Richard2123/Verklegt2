@@ -29,7 +29,6 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('userprofile/', include('userprofile.urls')),
     path('user/', include('user.urls')),
-    path('edituserprofile/', include('edituserprofile.urls')),
     path('itemdetail/', include('itemdetail.urls')),
     path('yourbids/', include('yourbids.urls')),
     path('youritems/', include('youritems.urls')),

@@ -22,12 +22,12 @@ def index(request):
 def edit_profile(request):
     profile = Profile.objects.filter(user=request.user).first()
     if request.method == 'POST':
-        form = EditProfileForm(instance=Profile, data=request.POST)
+        form = EditProfileForm(instance=profile, data=request.POST)
         if form.is_valid():
             profile = form.save(commit=False)
             profile.user = request.user
             profile.save()
             return redirect('/userprofile')
-    return render(request, 'edituserprofile/index.html', {
+    return render(request, 'user/editprofile.html', {
         'form': EditProfileForm(instance=profile)
     })
