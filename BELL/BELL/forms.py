@@ -1,6 +1,6 @@
 from django import forms
 from sellitem.models import ListItem
-from edituserprofile.models import EditProfile
+from user.models import Profile
 
 
 class SellItemForm(forms.ModelForm):
@@ -13,5 +13,10 @@ class SellItemForm(forms.ModelForm):
 class EditProfileForm(forms.ModelForm):
 
     class Meta:
-        model = EditProfile
-        fields = ('full_name', 'email', 'country', 'bio', 'profile_image')
+        model = Profile
+        exclude = ['id', 'user']
+        widgets = {
+            'full_name': forms.widgets.TextInput(attrs={'class': 'form-control'}),
+            'image': forms.widgets.TextInput(attrs={'class': 'form-control'}),
+            'bio': forms.widgets.Textarea(attrs={'class': 'form-control'})
+        }
