@@ -31,29 +31,8 @@
     display: inline;
 }
 
-/* Sidebar customisation */
-.sidenav {
-    width: 160px;
-    position: fixed;
-    left: 0;
-    background-color: royalblue;
-    margin-top: 140px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transition: 0.5s;
-    border-bottom-right-radius: 25px;
-    border-top-right-radius: 25px;
-}
-
-.sidenav p{
-    margin-left: 35px;
-    color: black;
-    font-weight: bold;
-}
-
-.sidenav a{
-    float: left;
-    color: black;
+.profile-img-nav {
+    width: 40px;
 }
 
 /* Footer customisation */
