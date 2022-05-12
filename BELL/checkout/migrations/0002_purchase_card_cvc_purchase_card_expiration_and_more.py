@@ -9,7 +9,7 @@ import django_countries.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('sellitem', '0008_alter_listitem_image2_alter_listitem_image3_and_more'),
+       # ('sellitem', '0008_alter_listitem_image2_alter_listitem_image3_and_more'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
         ('checkout', '0001_initial'),
     ]

@@ -6,12 +6,10 @@ from BELL.forms import SellItemForm
 def index(request):
     return render(request, 'sellitem/test.html')
 
-def post_item(request):
+def sell_item(request):
     if request.method == 'POST':
         form = SellItemForm(data=request.POST)
-        print(1)
-    return render(request, 'sellitem/test.html', {'form': SellItemForm()})
-
+        form.save()
     return render(request, 'sellitem/test.html', {'form': SellItemForm()})
 
     # Return a new untouched form

@@ -30,9 +30,15 @@ create table users (
 create table items (
 	iid integer not null,
 	uid integer not null,
-	startbid float not null,
+    item_name varchar(50),
+	start_bid float not null,
 	condition varchar(20),
 	description varchar(350),
+	main_image varchar(100),
+	image2 varchar(100),
+	image3 varchar(100),
+	image4 varchar(100),
+	image5 varchar(100),
 	primary key(iid),
 	foreign key(uid) references people(uid)
 );
