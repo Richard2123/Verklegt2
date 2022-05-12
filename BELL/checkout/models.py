@@ -6,6 +6,7 @@ class Purchase(models.Model):
     sellerid = models.IntegerField()
     buyerid = models.IntegerField()
     price = models.FloatField()
+    rating = models.FloatField(default=2.5)
 
     def __str__(self):
         return f"{self.itemid} {self.sellerid} {self.buyerid} {self.price}"

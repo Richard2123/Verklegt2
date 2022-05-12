@@ -10,9 +10,6 @@ def index(request):
 def post_item(request):
     if request.method == 'POST':
         print(1)
-    else:
-        form = SellItemForm()
-    return render(request, 'sellitem/test.html', {'form': form()
-    })
+    return render(request, 'sellitem/test.html', {'form': SellItemForm()})
 
 
