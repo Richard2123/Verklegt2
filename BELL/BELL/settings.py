@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'star_ratings',
+    'django_countries',
     'django.contrib.staticfiles',
     'frontpage.apps.FrontpageConfig',
     'checkout.apps.CheckoutConfig',
