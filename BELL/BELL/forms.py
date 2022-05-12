@@ -1,4 +1,4 @@
-from django.forms import ModelForm, widgets
+from django.forms import ModelForm, widgets, DateField
 from django import forms
 from sellitem.models import ListItem
 from user.models import Profile
@@ -53,7 +53,7 @@ class CheckoutForm(ModelForm):
             'postal_code': widgets.TextInput(attrs={'class': 'contact', 'id': 'postal-code'}),
             'payment_first_name': widgets.TextInput(attrs={'class': 'contact', 'id': 'payment-first-name'}),
             'payment_last_name': widgets.TextInput(attrs={'class': 'contact', 'id': 'payment-last-name'}),
-            'card_number': widgets.TextInput(attrs={'class': 'payment', 'id': 'card-number'}),
-            'card_expiration': widgets.TextInput(attrs={'class': 'payment', 'id': 'card-expiration'}),
-            'card_cvc': widgets.TextInput(attrs={'class': 'from-control', 'id': 'card-cvc'}),
+            'card_number': widgets.TextInput(attrs={'class': 'contact', 'id': 'card-number', 'maxlength': '16'}),
+            'card_expiration': widgets.SelectDateWidget(attrs={'class': 'contact', 'id': 'card-expiration'}),
+            'card_cvc': widgets.TextInput(attrs={'class': 'payment-cvc', 'id': 'card-cvc', 'maxlength': '3'}),
         }

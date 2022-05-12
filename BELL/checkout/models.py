@@ -5,7 +5,7 @@ from sellitem.models import ListItem
 
 
 class Purchase(models.Model):
-    rating = models.FloatField(default=2.5)
+    rating = models.FloatField(blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     item = models.ForeignKey(ListItem, on_delete=models.CASCADE, null=True)
     first_name = models.CharField(max_length=255, null=True)
