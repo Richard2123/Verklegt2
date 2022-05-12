@@ -26,7 +26,8 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
-                    <li class="rank">Your rank here</li>
+                    {% load ratings %}
+                    {% ratings user %}
                     <form class="search_form" method=POST
                     action="{% url 'search-index' %}">
                         {% csrf_token %}

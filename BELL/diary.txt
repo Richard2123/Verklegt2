@@ -20,3 +20,13 @@ Richard: Bjó til sell item síðu
 
 09.05.22:
 Richard: Bjó til user profile og edit user profile, byrjaði á your bids síðu.
+Hjöreifur: bjó til form fyrir sellitem og reyndi að koma því í gang með image uplpad
+
+10.05.22
+Hjörleifur: hélt áfram með sellitem
+
+11.05.22
+Hjörleifur: eftir 3 daga fann ég út að ég lokaði sviga á röngum stað og kom sellitem forminu loksins í gang.
+
+12.05.22
+Hjörleifur: vinna í ratings kerfinu.
