@@ -1,7 +1,11 @@
 from django.shortcuts import render
+from BELL.forms import CheckoutForm
 
 # Create your views here.
 
 
 def index(request):
-    return render(request, 'checkout/index.html')
+    context = {'form': CheckoutForm}
+    return render(request, 'checkout/index.html', context)
+
+

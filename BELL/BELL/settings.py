@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'star_ratings',
     'django_countries',
+    'crispy_forms',
     'django.contrib.staticfiles',
     'frontpage.apps.FrontpageConfig',
     'checkout.apps.CheckoutConfig',
@@ -153,6 +154,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 
 # storage location
