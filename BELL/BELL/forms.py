@@ -1,4 +1,4 @@
-from django.forms import ModelForm, widgets, DateField
+from django.forms import ModelForm, widgets
 from django import forms
 from sellitem.models import ListItem
 from user.models import Profile
@@ -8,21 +8,45 @@ from django_countries.widgets import CountrySelectWidget
 
 class SellItemForm(ModelForm):
 
-    main_image = forms.CharField(required=True, widget=forms.TextInput(attrs={ 'class': 'forms-control' }))
-    image2 = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'forms-control'}))
-    image3 = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'forms-control'}))
-    image4 = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'forms-control'}))
-    image5 = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'forms-control'}))
+    main_image = forms.CharField(
+        required=True,
+        widget=forms.TextInput(attrs={'class': 'forms-control'}),
+    )
+    image2 = forms.CharField(
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'forms-control'}),
+    )
+    image3 = forms.CharField(
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'forms-control'}),
+    )
+    image4 = forms.CharField(
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'forms-control'}),
+    )
+    image5 = forms.CharField(
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'forms-control'})
+    )
 
     class Meta:
         model = ListItem
-        exclude = [ 'id' ]
+        exclude = ['id', 'poster', 'itemurl']
         widgets = {
-            'itemname': widgets.TextInput(attrs={'class': 'form-control'}),
+            'itemName': widgets.TextInput(attrs={'class': 'form-control'}),
             'condition': widgets.TextInput(attrs={'class': 'form-control'}),
             'description': widgets.TextInput(attrs={'class': 'form-control'}),
-            'base_price': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'startBid': widgets.NumberInput(attrs={'class': 'form-control'}),
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def save(self, commit=True):
+        items = super().save(commit=False)
+        if commit:
+            items.save()
+        return items
 
 
 class EditProfileForm(ModelForm):
@@ -53,7 +77,7 @@ class CheckoutForm(ModelForm):
             'postal_code': widgets.TextInput(attrs={'class': 'contact', 'id': 'postal-code'}),
             'payment_first_name': widgets.TextInput(attrs={'class': 'contact', 'id': 'payment-first-name'}),
             'payment_last_name': widgets.TextInput(attrs={'class': 'contact', 'id': 'payment-last-name'}),
-            'card_number': widgets.TextInput(attrs={'class': 'contact', 'id': 'card-number', 'maxlength': '16'}),
-            'card_expiration': widgets.SelectDateWidget(attrs={'class': 'contact', 'id': 'card-expiration'}),
-            'card_cvc': widgets.TextInput(attrs={'class': 'payment-cvc', 'id': 'card-cvc', 'maxlength': '3'}),
+            'card_number': widgets.TextInput(attrs={'class': 'payment', 'id': 'card-number'}),
+            'card_expiration': widgets.TextInput(attrs={'class': 'payment', 'id': 'card-expiration'}),
+            'card_cvc': widgets.TextInput(attrs={'class': 'from-control', 'id': 'card-cvc'}),
         }
