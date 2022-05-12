@@ -4,7 +4,6 @@ from sellitem.models import ListItem
 from user.models import Profile
 
 
-
 class SellItemForm(ModelForm):
 
     main_image = forms.CharField(required=True, widget=forms.TextInput(attrs={ 'class': 'forms-control' }))
