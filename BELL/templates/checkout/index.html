@@ -11,7 +11,7 @@
         <li><a href="#review" data-toggle="tab">Review order</a></li>
     </ul>
 
-    <form>
+    <form name="myForm" method="POST">
         {% csrf_token %}
         <div class="tab-content">
             <div class="tab-pane active" id="contact-info">
@@ -51,19 +51,22 @@
                 </div>
             </div>
 
-            <div class="tab-pane" id="review">
-                <p> Product you are purchasing:</p>
-                <p>first name:</p>
+            <div class="tab-pane" id="review" name="review">
+                <p>first name: <span id="first-name-id"></span></p>
                 <p>last name:</p>
                 <p>Street name:</p>
                 <p>House name:</p>
                 <p>City:</p>
                 <p>Country:</p>
                 <p>Postal code:</p>
-                <p>Paying with card ending with:</p>
+                <p>Card number:</p>
                 <input type="submit" class="pay" value="Confirm">
             </div>
         </div>
     </form>
+
+
+
+
 
 {% endblock %}

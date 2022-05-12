@@ -2,8 +2,6 @@
 let loadFileOne = function(event) {
 let image = document.getElementById('output-one');
 image.src = URL.createObjectURL(event.target.files[0]);
-
-
 };
 
 let loadFileTwo = function(event) {
