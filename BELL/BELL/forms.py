@@ -2,6 +2,7 @@ from django.forms import ModelForm, widgets
 from django import forms
 from sellitem.models import ListItem
 from user.models import Profile
+from django_countries.widgets import CountrySelectWidget
 
 
 class SellItemForm(ModelForm):
@@ -30,6 +31,8 @@ class EditProfileForm(ModelForm):
         exclude = ['id', 'user']
         widgets = {
             'full_name': widgets.TextInput(attrs={'class': 'form-control'}),
+            'email': widgets.EmailInput(attrs={'class': 'form-control'}),
             'image': widgets.TextInput(attrs={'class': 'form-control'}),
-            'bio': widgets.Textarea(attrs={'class': 'form-control'})
+            'bio': widgets.Textarea(attrs={'class': 'form-control'}),
+            'country': CountrySelectWidget(attrs={'class': 'form-control'}),
         }
