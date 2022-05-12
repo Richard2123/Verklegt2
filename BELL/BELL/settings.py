@@ -162,3 +162,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 """GS_CREDENTIALS = service_account.Credentials.from_service_account_file(os.path.join(BASE_DIR, 'Bell_service_account.json'))
 DEFAULT_FILE_STORAGE = 'storages.baclends.gcloud.GoogleCloudStorage'
 BUCKET_NAME = 'initdll'"""
+
+# star ratings settings
+
+STAR_RATINGS_RERATE = False
