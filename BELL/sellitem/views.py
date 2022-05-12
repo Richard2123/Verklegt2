@@ -12,7 +12,7 @@ def post_item(request):
         print(1)
     else:
         form = SellItemForm()
-    return render(request, 'sellitem/test.html', {'form': form()
+    return render(request, 'sellitem/test.html', {'form': SellItemForm()
     })
 
 
