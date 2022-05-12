@@ -1,13 +1,27 @@
+from django.forms import ModelForm, widgets
 from django import forms
 from sellitem.models import ListItem
 from edituserprofile.models import EditProfile
 
 
-class SellItemForm(forms.ModelForm):
+
+class SellItemForm(ModelForm):
+
+    main_image = forms.CharField(required=True, widget=forms.TextInput(attrs={ 'class': 'forms-control' }))
+    image2 = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'forms-control'}))
+    image3 = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'forms-control'}))
+    image4 = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'forms-control'}))
+    image5 = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'forms-control'}))
 
     class Meta:
         model = ListItem
-        fields = ('itemname', 'condition', 'description', 'base_price', 'main_image', 'image2', 'image3', 'image4', 'image5')
+        exclude = [ 'id' ]
+        widgets = {
+            'itemname': widgets.TextInput(attrs={'class': 'form-control' }),
+            'condition': widgets.TextInput(attrs={'class': 'form-control'}),
+            'description': widgets.TextInput(attrs={'class': 'form-control'}),
+            'base_price': widgets.NumberInput(attrs={'class': 'form-control'}),
+        }
 
 
 class EditProfileForm(forms.ModelForm):
