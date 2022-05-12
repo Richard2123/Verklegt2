@@ -9,9 +9,10 @@ def index(request):
 
 def post_item(request):
     if request.method == 'POST':
-        form = SellItemForm(data=request.POST)
-        if form.is_valid():
-            form.save()
-            return render(request, 'sellitem/test.html')
+        print(1)
+    else:
+        form = SellItemForm()
+    return render(request, 'sellitem/test.html', {'form': form()
+    })
 
-    return render(request, 'sellitem/test.html', {'form': SellItemForm()})
+
