@@ -2,11 +2,11 @@ from django.db import models
 from django.utils.text import slugify
 from django.contrib.postgres.fields import ArrayField
 from django.contrib.auth.models import User
-from storages.backends.gcloud import GoogleCloudStorage
-storage = GoogleCloudStorage()
+"""from storages.backends.gcloud import GoogleCloudStorage
+storage = GoogleCloudStorage()"""
 
 
-class Upload:
+"""class Upload:
     @staticmethod
     def upload_item_image(image, name):
         try:
@@ -14,7 +14,7 @@ class Upload:
             location = storage.save(target_path, image)
             return storage.url(location)
         except Exception as x:
-            print("Image could not be uploaded")
+            print("Image could not be uploaded")"""
 
 
 class ListItem(models.Model):

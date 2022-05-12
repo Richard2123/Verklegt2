@@ -32,7 +32,8 @@ urlpatterns = [
     path('itemdetail/', include('itemdetail.urls')),
     path('yourbids/', include('yourbids.urls')),
     path('youritems/', include('youritems.urls')),
-    path('youritemdetail/', include('youritemdetail.urls'))
+    path('youritemdetail/', include('youritemdetail.urls')),
+    path('ratings/', include('star_ratings.urls', namespace='ratings'))
 ]
 
 """if settings.Debug:
