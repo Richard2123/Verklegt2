@@ -1,20 +1,5 @@
 from django.db import models
-from django.utils.text import slugify
-from django.contrib.postgres.fields import ArrayField
 from django.contrib.auth.models import User
-"""from storages.backends.gcloud import GoogleCloudStorage
-storage = GoogleCloudStorage()"""
-
-
-"""class Upload:
-    @staticmethod
-    def upload_item_image(image, name):
-        try:
-            target_path = '/images/' + name
-            location = storage.save(target_path, image)
-            return storage.url(location)
-        except Exception as x:
-            print("Image could not be uploaded")"""
 
 
 class ListItem(models.Model):
@@ -37,13 +22,14 @@ class ListItem(models.Model):
 
 def get_frontpage_listings():
     list_of_items = []
-    for x in ListItem.objects.all()[:6]:
+    for x in ListItem.objects.all()[:8]:
         try:
+            itid = x.id
             itimage = x.main_image
             itname = x.itemname
             itrating = 'unknown'
             ithighest = '10'
-            item = {'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
+            item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
             list_of_items.append(item)
 
         except:
