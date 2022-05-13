@@ -16,9 +16,8 @@
             {% for item in items %}
                 <div class="item">
                     <img src="{{ item.main_image }}" class="sug-img" alt="" id="suggested-image">
-                    <ul>{{ item.name }}</ul>
-                    <ul>Seller rating: {{ item.rating }}</ul>
-                    <ul>Highest bid: ${{ item.highest }}</ul>
+                    <ul>Product: {{ item.itemname }}</ul>
+                    <ul>Highest bid: ${{ item.base_price }}</ul>
                 </div>
             {% endfor %}
         {% else %}
