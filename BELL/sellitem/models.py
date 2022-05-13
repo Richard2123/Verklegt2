@@ -68,7 +68,7 @@ def get_specific_item(itemid):
         itrating = 'unknown'
         ithighest = item.highest_bid
         itemseller = item.user_id
-        return_item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
+        return_item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest, 'seller': itemseller}
 
     except:
         pass
