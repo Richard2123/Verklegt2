@@ -3,14 +3,6 @@
     <div class="search">
         {% if searched %}
             <p>You searched for {{ searched }}!</p>
-            <form class="sort" method="POST">
-            <select name="sorting" id="sorting-method">
-                <option value="name">sort by name</option>
-                <option value="lower-price">sort by lowest price</option>
-                <option value="higher-price">sort by highest price</option>
-            </select>
-            <input type="submit">
-            </form>
 
             <br>
             {% for item in items %}

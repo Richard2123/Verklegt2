@@ -35,7 +35,13 @@
                         {% csrf_token %}
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Search" name="searched">
+                            <select name="sorting" class="form-control">
+                                <option value="name">sort by name</option>
+                                <option value="lower-price">sort by lowest price</option>
+                                <option value="higher-price">sort by highest price</option>
+                            </select>
                         </div>
+
                         <button type="submit" class="btn btn-default">Search</button>
                     </form>
                     <li><a href="{% url 'userprofile-index' %}">{{ user.get_username }}</a></li>
