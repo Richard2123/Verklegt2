@@ -9,6 +9,8 @@ def index(request):
 def sell_item(request):
     if request.method == 'POST':
         form = SellItemForm(data=request.POST)
+        instance = form.save(commit=False)
+        instance.user = request.user
         form.save()
     return render(request, 'sellitem/test.html', {'form': SellItemForm()})
 
