@@ -12,12 +12,12 @@
         <li><a href="#review" data-toggle="tab">Review order</a></li>
     </ul>
 
-    <form>
+    <form name="myForm" method="POST">
         {% csrf_token %}
         <div class="tab-content">
             <div class="tab-pane active" id="contact-info">
                 <p>First name:</p>
-                {{ form.first_name }}
+                <label for="first-name">{{ form.first_name }}</label>
                 <p>Last Name:</p>
                 {{ form.last_name }}
                 <p>Street name:</p>
@@ -29,7 +29,7 @@
                 <p>Country:</p>
                 {{ form.country }}
                 <p>Postal code:</p>
-                {{ form }}
+                {{ form.postal_code }}
 
             </div>
             <div class="tab-pane" id="payment">
@@ -57,8 +57,8 @@
                 </div>
             </div>
 
-            <div class="tab-pane" id="review">
-                <p> Product you are purchasing:</p>
+            <div class="tab-pane" id="review" name="review">
+                <span id="check_before_submit"></span>
                 <p>first name:</p>
                 <p>last name:</p>
                 <p>Street name:</p>
@@ -66,10 +66,14 @@
                 <p>City:</p>
                 <p>Country:</p>
                 <p>Postal code:</p>
-                <p>Paying with card ending with:</p>
+                <p>Card number:</p>
                 <input type="submit" class="pay" value="Confirm">
             </div>
-        </div>-->
+        </div>
+
     </form>
+
+
+
 
 {% endblock %}

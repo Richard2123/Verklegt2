@@ -8,10 +8,13 @@ class ListItem(models.Model):
     description = models.CharField(max_length=1000)
     base_price = models.FloatField(default=0)
     main_image = models.CharField(max_length=9999)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     image2 = models.CharField(max_length=9999, null=True, blank=True)
     image3 = models.CharField(max_length=9999, null=True, blank=True)
     image4 = models.CharField(max_length=9999, null=True, blank=True)
     image5 = models.CharField(max_length=9999, null=True, blank=True)
+    sold = models.BooleanField(default=False)
+    highest_bid = models.IntegerField(default=0)
 
     def __str__(self):
         return f"{self.itemname}  {self.condition} {self.description}"
@@ -24,7 +27,6 @@ def get_frontpage_listings():
     list_of_items = []
     for x in ListItem.objects.all()[:8]:
         try:
-            itid = x.id
             itimage = x.main_image
             itname = x.itemname
             itrating = 'unknown'
@@ -36,6 +38,21 @@ def get_frontpage_listings():
         except:
             pass
 
+    return list_of_items
+
+def get_your_items():
+    list_of_items = []
+    for x in ListItem.objects.all()[:6]:
+        try:
+            itimage = x.main_image
+            itname = x.itemname
+            itrating = 'unknown'
+            ithighest = '10'
+            item = {'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
+            list_of_items.append(item)
+
+        except:
+            pass
     return list_of_items
 
 
