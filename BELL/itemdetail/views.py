@@ -8,13 +8,22 @@ from BELL.forms import MakeBid
 
 def index(request, item_id):
     item = ListItem.objects.get(id=item_id)
-    form = MakeBid
+    form = MakeBid()
     if request.method == 'POST':
-        print(request.POST['bid'])
         bid = request.POST['bid']
-        if bid > item.highest_bid:
+        print(bid)
+        bid = int(bid)
+        highest_bid = item.highest_bid
+        highest_bid = int(highest_bid)
+        if bid > highest_bid:
+            print('test')
+            bidform = MakeBid(data=request.POST)
+            instance = bidform.save(commit=False)
+            instance.bidder_id = request.user.id
+            instance.item_id = item.id
             item.highest_bid = bid
             item.save()
+            bidform.save()
         else:
             pass
 

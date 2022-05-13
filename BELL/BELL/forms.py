@@ -91,3 +91,10 @@ class MakeBid(ModelForm):
         widgets = {
             'bid': widgets.NumberInput(attrs={'class': 'new_offer'})
         }
+
+"""    def save(self, commit=True):
+        bid = super().save(commit=False)
+        if commit:
+            bid.save()
+        return bid
+"""
