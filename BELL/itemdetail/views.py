@@ -1,5 +1,11 @@
 from django.shortcuts import render
+from sellitem.models import get_specific_item
 
-# Create your views here.
-def index(request):
-    return render(request, 'itemdetails/index.html')
+
+def get_itemdetails(itemid):
+    return get_specific_item(itemid)
+
+
+def index(request, itemid):
+    return render(request, 'itemdetails/index.html', context={'itemdetails': get_itemdetails(itemid)})
+

@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
+    {{% itemdetails %}}
     <div class="image-detail">
         <div class="big-image">
-            <img src="https://d27jswm5an3efw.cloudfront.net/app/uploads/2019/07/insert-image-html.jpg" class="detail-image1" id="detail-image1" alt="">
+            <img src={{ itemdetails.main_image }} class="detail-image1" id="detail-image1" alt="">
         </div>
         <div class="smaller-image">
             <img src="https://d27jswm5an3efw.cloudfront.net/app/uploads/2019/07/insert-image-html.jpg" class="detail-image2" id="detail-image2" alt="">

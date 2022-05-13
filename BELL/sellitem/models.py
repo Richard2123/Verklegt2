@@ -7,7 +7,7 @@ class ListItem(models.Model):
     condition = models.CharField(max_length=20)
     description = models.CharField(max_length=1000)
     base_price = models.FloatField(default=0)
-    main_image = models.CharField(max_length=9999, null=True, blank=True)
+    main_image = models.CharField(max_length=9999)
     image2 = models.CharField(max_length=9999, null=True, blank=True)
     image3 = models.CharField(max_length=9999, null=True, blank=True)
     image4 = models.CharField(max_length=9999, null=True, blank=True)
@@ -29,6 +29,7 @@ def get_frontpage_listings():
             itname = x.itemname
             itrating = 'unknown'
             ithighest = '10'
+            iturl = '/itemdetail/'+str(itid)
             item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
             list_of_items.append(item)
 
@@ -36,3 +37,21 @@ def get_frontpage_listings():
             pass
 
     return list_of_items
+
+
+def get_specific_item(itemid):
+    return_item = {}
+    item = ListItem.objects.filter(itemid)
+    try:
+        itid = item.id
+        itimage = item.main_image
+        itname = item.itemname
+        itrating = 'unknown'
+        ithighest = '10'
+        iturl = '/itemdetail/'+str(itid)
+        return_item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest, 'url': iturl}
+
+    except:
+        pass
+
+    return return_item
