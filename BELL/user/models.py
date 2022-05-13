@@ -11,4 +11,5 @@ class Profile(models.Model):
     country = CountryField(max_length=4000, blank_label='(select country)', blank=True)
     bio = models.CharField(max_length=1000, blank=True)
     image = models.CharField(max_length=9999, blank=True, default="https://cdn.vectorstock.com/i/1000x1000/45/79/male-avatar-profile-picture-silhouette-light-vector-4684579.webp")
+    rating = models.CharField(max_length=3, null=True)
 

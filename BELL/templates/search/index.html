@@ -9,7 +9,12 @@
                 <div class="item">
                     <img src="{{ item.main_image }}" class="sug-img" alt="" id="suggested-image">
                     <ul>Product: {{ item.itemname }}</ul>
-                    <ul>Highest bid: ${{ item.base_price }}</ul>
+                    {% if item.user_id == null %}
+                        <ul>User rating: unknown</ul>
+                    {% else %}
+                        <ul>User rating: {{ item.user.profile.rating }}</ul>
+                    {% endif %}
+                    <ul>Highest bid: ${{ item.highest_bid }}</ul>
                 </div>
             {% endfor %}
         {% else %}
