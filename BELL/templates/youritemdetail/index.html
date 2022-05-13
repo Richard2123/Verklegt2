@@ -1,14 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="your-item">
-        <div class="your-item-image">
-            <img src="https://d27jswm5an3efw.cloudfront.net/app/uploads/2019/07/insert-image-html.jpg" alt="" class="specific-item-image">
+        <div class="image-detail">
+        <div class="detail-image1">
+            <img src="{{ item.main_image }}" class="detail-image1"/>
         </div>
-        <div class="your-item-text">
-            <h3>Product: <span id="product-name">product name here</span></h3>
-            <h3>Condition: <span id="product-condition"></span></h3>
-            <span class="product-description">SOME TEXT SOME TEXT SOME TEXT SOME TEXT SOME TEXT SOME TEXT SOME TEXT SOME TEXT SOME TEXT SOME TEXT</span>
+        <div class="smaller-image">
+            <img src="{{ item.image2 }}" class="detail-image2">
+            <img src="{{ item.image3 }}" class="detail-image2" id="detail-image3" alt="">
+            <img src="{{ item.image4 }}" class="detail-image2" id="detail-image4" alt="">
+            <img src="{{ item.image5 }}" class="detail-image2" id="detail-image5" alt="">
         </div>
+    </div>
+    <div class="product-text">
+        <h3>Product:<span>{{ item.itemname }}</span></h3>
+        <h3>Condition:<span>{{ item.condition }}</span></h3>
+        <span> {{ item.description }}</span>
+    </div>
+    <div class="highest-offer">
+        <h3>Highest offer: $<span>{{ item.highest_bid }}</span></h3>
+    </div>
         <div class="product-offers">
             <h3>Highest Offer: <span id="product-price"></span></h3>
             <button id="accept-highest-offer" type="submit">Accept Highest</button>

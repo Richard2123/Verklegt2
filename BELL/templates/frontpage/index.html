@@ -7,7 +7,7 @@
                 <img src="{{ item.image }}" class="sug-img" alt="" id={{ item.id }}, onclick="location.href='itemdetail/{{ item.id }}/'">
                 <ul>{{ item.name }}</ul>
                 <ul>Seller rating: {{ item.rating }}</ul>
-                <ul>Highest bid: $</ul>
+                <ul>Highest bid: $ {{ item.highest }}</ul>
             </div>
         {% endfor %}
     </div>

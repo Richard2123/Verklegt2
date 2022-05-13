@@ -30,7 +30,7 @@ def get_frontpage_listings():
             itid = x.id
             itimage = x.main_image
             itname = x.itemname
-            itrating = 'unknown'
+            itrating = x.user.profile.rating
             ithighest = x.highest_bid
             iturl = '/itemdetail/'+str(itid)+'/'
             item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest, 'url': iturl}
@@ -46,11 +46,12 @@ def get_your_items(user):
     list_of_items = []
     for x in ListItem.objects.all().filter(user_id=user.id)[:8]:
         try:
+            itid = x.id
             itimage = x.main_image
             itname = x.itemname
-            itrating = 'unknown'
+            itrating = x.user.profile.rating
             ithighest = x.highest_bid
-            item = {'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
+            item = {'id':itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
             list_of_items.append(item)
 
         except:
@@ -65,7 +66,7 @@ def get_specific_item(itemid):
         itid = item.id
         itimage = item.main_image
         itname = item.itemname
-        itrating = 'unknown'
+        itrating = user.profile.rating
         ithighest = item.highest_bid
         itemseller = item.user_id
         return_item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest, 'seller': itemseller}
