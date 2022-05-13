@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="your-items">
-        <h3>Your Items:</h3>
-        <div class="item-to-sell">
-            <img src="https://d27jswm5an3efw.cloudfront.net/app/uploads/2019/07/insert-image-html.jpg" alt="" class="item-image">
-            <p>Item Name here</p>
-            <p>highest bid here</p>
-        </div>
+        <p>Your Item Listings:</p>
+        {% for item in your_items %}
+            <div class="item">
+                <img src="{{ item.image }}" class="sug-img" alt="" id="suggested-image">
+                <ul>{{ item.name }}</ul>
+                <ul>Seller rating: {{ item.rating }}</ul>
+                <ul>Highest bid: ${{ item.highest }}</ul>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}

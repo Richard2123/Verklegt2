@@ -50,3 +50,18 @@ def get_frontpage_listings():
             pass
 
     return list_of_items
+
+def get_your_items():
+    list_of_items = []
+    for x in ListItem.objects.all()[:6]:
+        try:
+            itimage = x.main_image
+            itname = x.itemname
+            itrating = 'unknown'
+            ithighest = '10'
+            item = {'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
+            list_of_items.append(item)
+
+        except:
+            pass
+    return list_of_items

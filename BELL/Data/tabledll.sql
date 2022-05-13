@@ -35,10 +35,10 @@ create table items (
 	condition varchar(20),
 	description varchar(350),
 	main_image varchar(100),
-	image2 varchar(100),
-	image3 varchar(100),
-	image4 varchar(100),
-	image5 varchar(100),
+	image2 varchar(1000),
+	image3 varchar(1000),
+	image4 varchar(1000),
+	image5 varchar(1000),
 	primary key(iid),
 	foreign key(uid) references people(uid)
 );
