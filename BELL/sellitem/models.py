@@ -45,7 +45,7 @@ def get_frontpage_listings():
 
 def get_your_items(user):
     list_of_items = []
-    for x in ListItem.objects.all().filter(user_id=user.id)[:8]:
+    for x in ListItem.objects.all().filter(user_id=user.id):
         try:
             itid = x.id
             itimage = x.main_image
