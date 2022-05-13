@@ -49,7 +49,7 @@ def get_your_items(user):
             itimage = x.main_image
             itname = x.itemname
             itrating = 'unknown'
-            ithighest = '10'
+            ithighest = x.highest_bid
             item = {'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
             list_of_items.append(item)
 
@@ -60,15 +60,15 @@ def get_your_items(user):
 
 def get_specific_item(itemid):
     return_item = {}
-    item = ListItem.objects.filter(itemid)
+    item = ListItem.objects.get(itemid)
     try:
         itid = item.id
         itimage = item.main_image
         itname = item.itemname
         itrating = 'unknown'
-        ithighest = '10'
-        iturl = '/itemdetail/'+str(itid)
-        return_item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest, 'url': iturl}
+        ithighest = item.highest_bid
+        itemseller = item.user_id
+        return_item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
 
     except:
         pass
