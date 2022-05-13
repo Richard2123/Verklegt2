@@ -13,3 +13,8 @@ class Profile(models.Model):
     image = models.CharField(max_length=9999, blank=True, default="https://cdn.vectorstock.com/i/1000x1000/45/79/male-avatar-profile-picture-silhouette-light-vector-4684579.webp")
     rating = models.CharField(max_length=3, null=True)
 
+    def __str__(self):
+        return f"{self.user} {self.full_name} {self.email} {self.country} {self.bio} {self.image}"
+
+    def __int__(self):
+        return self.id

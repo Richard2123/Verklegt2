@@ -20,7 +20,7 @@ class ListItem(models.Model):
         return f"{self.itemname}  {self.condition} {self.description}"
 
     def __float__(self):
-        return self.base_price
+        return self.base_price, self.id,
 
 
 def get_frontpage_listings():

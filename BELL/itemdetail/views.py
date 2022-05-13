@@ -7,6 +7,6 @@ from sellitem.models import ListItem
 
 
 def index(request, item_id):
-    item = ListItem.objects.get(item_id)
+    item = ListItem.objects.get(id=item_id)
     return render(request, 'itemdetails/index.html', context={'itemdetails': item})
 
