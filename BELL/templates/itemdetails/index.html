@@ -19,15 +19,15 @@
     <div class="highest-offer">
         <h3>Highest offer: $<span>{{ item.highest_bid }}</span></h3>
     </div>
-        {{% if item.sold == False %}}
+        {% if item.sold == False %}
             <form class="form form-horizontal" method="post">
                 {% csrf_token %}
                 {{ form }}
                 <input type="submit" value="Make offer"/>
             </form>
-        {{% else %}}
+        {% else %}
             <div class="product-offers">
                     <h3>Product has been sold for $<span id="product-price">{{ item.highest_bid }}</span></h3>
                 </div>
-        {{% endif %}}
+        {% endif %}
 {% endblock %}
