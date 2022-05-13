@@ -31,7 +31,7 @@ class SellItemForm(ModelForm):
 
     class Meta:
         model = ListItem
-        exclude = ['id', 'user', 'itemurl', 'sold']
+        exclude = ['id', 'user', 'itemurl', 'sold', 'highest_bid']
         widgets = {
             'itemname': widgets.TextInput(attrs={'class': 'form-control'}),
             'condition': widgets.TextInput(attrs={'class': 'form-control'}),
@@ -53,7 +53,7 @@ class EditProfileForm(ModelForm):
 
     class Meta:
         model = Profile
-        exclude = ['id', 'user']
+        exclude = ['id', 'user', 'rating']
         widgets = {
             'full_name': widgets.TextInput(attrs={'class': 'form-control'}),
             'email': widgets.EmailInput(attrs={'class': 'form-control'}),
