@@ -10,23 +10,23 @@ class SellItemForm(ModelForm):
 
     main_image = forms.CharField(
         required=True,
-        widget=forms.TextInput(attrs={'class': 'forms-control'}),
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
     )
     image2 = forms.CharField(
         required=False,
-        widget=forms.TextInput(attrs={'class': 'forms-control'}),
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
     )
     image3 = forms.CharField(
         required=False,
-        widget=forms.TextInput(attrs={'class': 'forms-control'}),
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
     )
     image4 = forms.CharField(
         required=False,
-        widget=forms.TextInput(attrs={'class': 'forms-control'}),
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
     )
     image5 = forms.CharField(
         required=False,
-        widget=forms.TextInput(attrs={'class': 'forms-control'})
+        widget=forms.TextInput(attrs={'class': 'form-control'})
     )
 
     class Meta:
