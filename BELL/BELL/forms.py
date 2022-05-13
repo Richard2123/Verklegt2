@@ -32,7 +32,7 @@ class SellItemForm(ModelForm):
 
     class Meta:
         model = ListItem
-        exclude = ['id', 'user', 'itemurl', 'sold', 'highest_bid']
+        exclude = ['id', 'user', 'itemurl', 'sold', 'highest_bid', 'highest_bidder']
         widgets = {
             'itemname': widgets.TextInput(attrs={'class': 'form-control'}),
             'condition': widgets.TextInput(attrs={'class': 'form-control'}),

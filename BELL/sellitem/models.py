@@ -15,6 +15,7 @@ class ListItem(models.Model):
     image5 = models.CharField(max_length=9999, null=True, blank=True)
     sold = models.BooleanField(default=False)
     highest_bid = models.CharField(max_length=255, default=0)
+    highest_bidder = models.CharField(max_length=1000, null=True)
 
     def __str__(self):
         return f"{self.itemname}  {self.condition} {self.description}"
@@ -30,7 +31,7 @@ def get_frontpage_listings():
             itid = x.id
             itimage = x.main_image
             itname = x.itemname
-            itrating = 'unknown'
+            itrating = x.user.profile.rating
             ithighest = x.highest_bid
             iturl = '/itemdetail/'+str(itid)+'/'
             item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest, 'url': iturl}
@@ -46,11 +47,12 @@ def get_your_items(user):
     list_of_items = []
     for x in ListItem.objects.all().filter(user_id=user.id)[:8]:
         try:
+            itid = x.id
             itimage = x.main_image
             itname = x.itemname
-            itrating = 'unknown'
+            itrating = x.user.profile.rating
             ithighest = x.highest_bid
-            item = {'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
+            item = {'id':itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
             list_of_items.append(item)
 
         except:

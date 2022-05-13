@@ -4,7 +4,7 @@
         <p>Your Item Listings:</p>
         {% for item in your_items %}
             <div class="item">
-                <img src="{{ item.image }}" class="sug-img" alt="" id="suggested-image">
+                <img src="{{ item.image }}" class="sug-img" alt="" id={{ item.id }}, onclick="location.href='/youritemdetail/{{ item.id }}/'">
                 <ul>{{ item.name }}</ul>
                 <ul>Seller rating: {{ item.rating }}</ul>
                 <ul>Highest bid: ${{ item.highest }}</ul>

@@ -243,7 +243,6 @@
 }
 
 /* Item detail */
-
 .detail-image1 {
     width: 400px;
 }
@@ -311,9 +310,12 @@ img {
 }
 
 /* your items */
-
 .item-image {
     width: 200px
+}
+
+.your-items p {
+    font-weight: bold;
 }
 
 /* your item detail */
