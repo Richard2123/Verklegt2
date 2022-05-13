@@ -33,7 +33,7 @@ class SellItemForm(ModelForm):
         model = ListItem
         exclude = ['id', 'user', 'itemurl', 'sold']
         widgets = {
-            'itemName': widgets.TextInput(attrs={'class': 'form-control'}),
+            'itemname': widgets.TextInput(attrs={'class': 'form-control'}),
             'condition': widgets.TextInput(attrs={'class': 'form-control'}),
             'description': widgets.TextInput(attrs={'class': 'form-control'}),
             'startBid': widgets.NumberInput(attrs={'class': 'form-control'}),
