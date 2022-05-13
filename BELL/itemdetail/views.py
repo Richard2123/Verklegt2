@@ -12,9 +12,9 @@ def index(request, item_id):
         bid = int(bid)
         highest_bid = item.highest_bid
         highest_bid = int(highest_bid)
-        item.highest_bidder = request.user.id
         if bid > highest_bid:
             print('test')
+            item.highest_bidder = request.user.id
             bidform = MakeBid(data=request.POST)
             instance = bidform.save(commit=False)
             instance.bidder_id = request.user.id
