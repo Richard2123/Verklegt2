@@ -18,15 +18,18 @@ storage = GoogleCloudStorage()"""
 
 
 class ListItem(models.Model):
-    itemname = models.CharField(max_length=255)
-    condition = models.CharField(max_length=20)
-    description = models.CharField(max_length=1000)
-    base_price = models.FloatField(default=0)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    itemname = models.CharField(max_length=255, null=True)
+    condition = models.CharField(max_length=20, null=True)
+    description = models.CharField(max_length=1000, null=True)
+    base_price = models.FloatField(default=0, null=True)
     main_image = models.CharField(max_length=9999, null=True, blank=True)
     image2 = models.CharField(max_length=9999, null=True, blank=True)
     image3 = models.CharField(max_length=9999, null=True, blank=True)
     image4 = models.CharField(max_length=9999, null=True, blank=True)
     image5 = models.CharField(max_length=9999, null=True, blank=True)
+    sold = models.BooleanField(default=False)
+    highest_bid = models.IntegerField(default=0)
 
     def __str__(self):
         return f"{self.itemname}  {self.condition} {self.description}"
