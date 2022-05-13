@@ -15,6 +15,7 @@ class ListItem(models.Model):
     image5 = models.CharField(max_length=9999, null=True, blank=True)
     sold = models.BooleanField(default=False)
     highest_bid = models.CharField(max_length=255, default=0)
+    highest_bidder = models.CharField(max_length=1000, null=True)
 
     def __str__(self):
         return f"{self.itemname}  {self.condition} {self.description}"
