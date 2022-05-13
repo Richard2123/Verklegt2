@@ -7,7 +7,7 @@
             <br>
             {% for item in items %}
                 <div class="item">
-                    <img src="{{ item.main_image }}" class="sug-img" alt="" id="suggested-image">
+                    <img src="{{ item.main_image }}" class="sug-img" alt="" id={{ item.id }} onclick="location.href='/itemdetail/{{ item.id }}/'">
                     <ul>Product: {{ item.itemname }}</ul>
                     {% if item.user_id == null %}
                         <ul>User rating: unknown</ul>
