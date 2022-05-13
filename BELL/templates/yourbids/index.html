@@ -1,25 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="active-bids">
-        <h3>Your active bids:</h3>
-        <div class="active-info">
-            <p>Product name</p>
-            <img src="https://d27jswm5an3efw.cloudfront.net/app/uploads/2019/07/insert-image-html.jpg" class="bids-img" alt="">
-        </div>
-        <div class="accepted-info">
-            <p>Product name</p>
-            <img src="https://d27jswm5an3efw.cloudfront.net/app/uploads/2019/07/insert-image-html.jpg" class="bids-img" alt="">
-        </div>
-    </div>
-    <div class="accepted-bids">
-        <h3>Accepted bids:</h3>
-        <div class="accepted-info">
-            <p>Product name</p>
-            <img src="https://d27jswm5an3efw.cloudfront.net/app/uploads/2019/07/insert-image-html.jpg" class="bids-img" alt="">
-        </div>
-        <div class="accepted-info">
-            <p>Product name</p>
-            <img src="https://d27jswm5an3efw.cloudfront.net/app/uploads/2019/07/insert-image-html.jpg" class="bids-img" alt="">
-        </div>
+    <div class="suggested">
+        <p>All items:</p>
+        {% for item in yourbids %}
+            <div class="item">
+                <img src="{{ item.image }}" class="sug-img" alt="" id={{ item.id }}, onclick="location.href='itemdetail/{{ item.id }}/'">
+                <ul>{{ item.name }}</ul>
+                <ul>Seller rating: {{ item.rating }}</ul>
+                <ul>Your bid: $ {{ item.bid }}</ul>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}

@@ -15,3 +15,22 @@ class Bids(models.Model):
     def __float__(self):
         return self.bid
 
+
+def get_your_bids(user):
+    list_of_items = []
+    for x in Bids.objects.all().filter(bidder_id=user.id)[:8]:
+        item = ListItem.objects.get(id=x.item_id)
+        try:
+            itid = item.id
+            itimage = item.main_image
+            itname = item.itemname
+            itrating = item.user.profile.rating
+            ithighest = item.highest_bid
+            bid = x.bid
+            item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest, 'bid': bid}
+            list_of_items.append(item)
+
+        except:
+            pass
+
+    return list_of_items
