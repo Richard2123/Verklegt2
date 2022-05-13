@@ -9,4 +9,9 @@ class Bids(models.Model):
     bidder = models.ForeignKey(User, on_delete=models.CASCADE)
     bid = models.FloatField()
 
+    def __int__(self):
+        return self.item, self.bidder
+
+    def __float__(self):
+        return self.bid
 

@@ -19,9 +19,10 @@
     <div class="highest-offer">
         <h3>Highest offer: $<span>{{ item.highest_bid }}</span></h3>
     </div>
-    <form>
-        <input type="text" value="$" id="new-offer">
-        <input type="submit" value="Make offer" id="make-offer">
+    <form class="form form-horizontal" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Make offer"/>
     </form>
     <div class="similar-products">
         <p>Similar products:</p>

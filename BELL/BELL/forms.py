@@ -4,6 +4,7 @@ from sellitem.models import ListItem
 from user.models import Profile
 from checkout.models import Purchase
 from django_countries.widgets import CountrySelectWidget
+from yourbids.models import Bids
 
 
 class SellItemForm(ModelForm):
@@ -80,4 +81,13 @@ class CheckoutForm(ModelForm):
             'card_number': widgets.TextInput(attrs={'class': 'payment', 'id': 'card-number'}),
             'card_expiration': widgets.TextInput(attrs={'class': 'payment', 'id': 'card-expiration'}),
             'card_cvc': widgets.TextInput(attrs={'class': 'from-control', 'id': 'card-cvc'}),
+        }
+
+
+class MakeBid(ModelForm):
+    class Meta:
+        model = Bids
+        exclude = ['id', 'item', 'bidder']
+        widgets = {
+            'bid': widgets.NumberInput(attrs={'class': 'new_offer'})
         }

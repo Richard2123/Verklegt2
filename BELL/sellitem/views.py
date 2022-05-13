@@ -6,6 +6,7 @@ from BELL.forms import SellItemForm
 def index(request):
     return render(request, 'sellitem/test.html')
 
+
 def sell_item(request):
     if request.method == 'POST':
         form = SellItemForm(data=request.POST)
