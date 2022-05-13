@@ -66,7 +66,7 @@ def get_specific_item(itemid):
         itid = item.id
         itimage = item.main_image
         itname = item.itemname
-        itrating = user.profile.rating
+        itrating = 'unknown'
         ithighest = item.highest_bid
         itemseller = item.user_id
         return_item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest, 'seller': itemseller}

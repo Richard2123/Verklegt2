@@ -15,18 +15,18 @@
     <div class="product-text">
         <h3>Product:<span>{{ item.itemname }}</span></h3>
         <h3>Condition:<span>{{ item.condition }}</span></h3>
-        <span> {{ item.description }}</span>
+        <span>{{ item.description }}</span>
     </div>
-    <div class="highest-offer">
-        <h3>Highest offer: $<span>{{ item.highest_bid }}</span></h3>
-    </div>
-        <div class="product-offers">
-            <h3>Highest Offer: <span id="product-price"></span></h3>
-            <button id="accept-highest-offer" type="submit">Accept Highest</button>
-        </div>
-        <div class="all-offers">
-            <h3>All Offers:</h3>
-            <div class="lower-offers"><span>$100 from Richard <button type="submit" id="accept-offer">Accept offer</button></span></div>
-        </div>
+        {% if item.sold == False %}
+            <form class="product-offers", method="POST">
+                {% csrf_token %}
+                <h3>Highest Offer: $<span id="product-price">{{ item.highest_bid }}</span></h3>
+                <input id="accept-highest-offer" type="submit" value="Accept">
+            </form>
+        {% else %}
+            <div class="product-offers">
+                <h3>Product has been sold for $<span id="product-price">{{ item.highest_bid }}</span></h3>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
