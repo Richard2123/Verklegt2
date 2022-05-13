@@ -26,8 +26,15 @@
                 <input type="submit" value="Make offer"/>
             </form>
         {% else %}
-            <div class="product-offers">
-                    <h3>Product has been sold for $<span id="product-price">{{ item.highest_bid }}</span></h3>
+            {% if item.highest_bidder == user.id%}
+                <div class="checkout">
+                    <button value="go to checkout" onclick="location.href='/checkout/{{ item.id }}/'"></button>
                 </div>
+                {% else %}
+
+                        <div class="product-offers">
+                        <h3>Product has been sold for $<span id="product-price">{{ item.highest_bid }}</span></h3>
+                    </div>
+                {% endif %}
         {% endif %}
 {% endblock %}
