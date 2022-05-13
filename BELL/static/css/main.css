@@ -38,17 +38,24 @@
 /* Footer customisation */
 
 .footer-custom {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: royalblue;
     color: black;
-    margin-top: 100px;
+    margin-top: auto;
 }
 
 .text-reset {
     color: black;
+}
+
+/* Body customisation*/
+.body-custom {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* front page */
@@ -327,6 +334,12 @@ img {
 
 .lower-offers {
     margin-top: 5px;
+}
+
+
+/*Sell item customisation*/
+.sell-item-cust {
+    margin-bottom: 10px
 }
 
 
