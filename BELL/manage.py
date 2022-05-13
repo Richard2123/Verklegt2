@@ -2,6 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+# Git repository: https://github.com/Richard2123/Verklegt2
 
 
 def main():
