@@ -25,14 +25,15 @@ class ListItem(models.Model):
 
 def get_frontpage_listings():
     list_of_items = []
-    for x in ListItem.objects.all()[:8]:
+    for x in ListItem.objects.all().filter(sold=False)[:8]:
         try:
+            itid = x.id
             itimage = x.main_image
             itname = x.itemname
             itrating = 'unknown'
             ithighest = '10'
-            iturl = '/itemdetail/'+str(itid)
-            item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest}
+            iturl = '/itemdetail/'+str(itid)+'/'
+            item = {'id': itid, 'image': itimage, 'name': itname, 'rating': itrating, 'highest': ithighest, 'url': iturl}
             list_of_items.append(item)
 
         except:
@@ -40,9 +41,10 @@ def get_frontpage_listings():
 
     return list_of_items
 
-def get_your_items():
+
+def get_your_items(user):
     list_of_items = []
-    for x in ListItem.objects.all()[:6]:
+    for x in ListItem.objects.all().filter(user_id=user.id)[:8]:
         try:
             itimage = x.main_image
             itname = x.itemname
