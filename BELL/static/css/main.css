@@ -62,7 +62,7 @@
 }
 
 .sug-img {
-    height: 150px;
+    height: 100px;
     margin-left: 43px;
 }
 
@@ -220,10 +220,18 @@
 }
 
 /* Search */
+.search p {
+    display: inline-block;
+    width: 50%;
+    font-weight: bold;
+}
 
-#sorting-method {
-    display: inline;
+
+
+.sort {
+    display: inline-block;
     float: right;
+    width: 50%;
 }
 
 /* Item detail */

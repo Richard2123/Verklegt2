@@ -26,11 +26,12 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
+                    <div class="rank">
                     {% load ratings %}
                     {% ratings user %}
                     {{ read_only }}
-                    <form class="search_form" method=POST
-                    action="{% url 'search-index' %}">
+                    </div>
+                    <form class="search_form" method=POST action="{% url 'search-index' %}">
                         {% csrf_token %}
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Search" name="searched">
