@@ -3,9 +3,15 @@
     background-color: royalblue;
 }
 
+.brand-img {
+    display: inline-block;
+    float: left;
+}
+
 .navbar-custom .navbar-brand {
     color: black;
     font-size: xx-large;
+    display: inline-block;
 }
 .navbar-custom .navbar-collapse li a{
     color: black;
