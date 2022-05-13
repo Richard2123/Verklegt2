@@ -12,6 +12,7 @@ def index(request, item_id):
         bid = int(bid)
         highest_bid = item.highest_bid
         highest_bid = int(highest_bid)
+        item.highest_bidder = request.user.id
         if bid > highest_bid:
             print('test')
             bidform = MakeBid(data=request.POST)
