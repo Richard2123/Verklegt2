@@ -18,7 +18,7 @@ class Bids(models.Model):
 
 def get_your_bids(user):
     list_of_items = []
-    for x in Bids.objects.all().filter(bidder_id=user.id)[:8]:
+    for x in Bids.objects.all().filter(bidder_id=user.id):
         item = ListItem.objects.get(id=x.item_id)
         try:
             itid = item.id
